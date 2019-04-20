@@ -26,7 +26,7 @@ def show():
 
     # Getting currency exchange rates from fixer.io using base and target currencies
     # provided by the user.
-    res = requests.get(f"http://data.fixer.io/api/latest?access_key=b2629cd82138d62e6a275755508257f7&base={base}&symbols={target}&format=1")
+    res = requests.get(f"http://data.fixer.io/api/latest?access_key=(SECRET)&base={base}&symbols={target}&format=1")
 
     # Making sure the request is successful
     if res.status_code != 200:
