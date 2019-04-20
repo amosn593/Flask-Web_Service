@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Foreign Exchange Rates</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css')}}">
+    </head>
+    <body>
+        <div class="container text-center">
+           <h1>Foreign Exchange Rates</h1>
+           <p>Get daily foreign exchange rates for world's most traded currencies.</p>
+           <h3>Date-Time {{date}}</h3>
+        <div class="container">
+            <form action="{{url_for('show')}}" method="post">
+            <div class="form-group">
+                <label for="bs" id = "lb">Base Currency</label>
+                <select class="form-control" name="base-currency" id ="bs">
+                    <option value="EUR">EURO</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ts" id = "lb">Target Currency</label>
+                <select class="form-control" name="target-currency" id ="ts">
+                    <option value="GBP">British Sterling Pound</option>
+                    <option value="INR">Indian Rupee</option>
+                    <option value="JPY">Japanese Yen</option>
+                    <option value="KES">Kenyan Shilling</option>
+                    <option value="TZS">Tanzania Shilling</option>
+                    <option value="UGX">Ugandan Shilling</option>
+                    <option value="USD">United State Dollar</option>
+                    <option value="CNY">Chinese Yuan</option>
+                </select>
+                 <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="container">
+                <h1>Note:</h1>
+                <p>This application is only made for demostration purposes and it should not be
+                used for commercial purposes.</p>
+                <p>Also, note that base currency has only one option, EURO, due to limitation of
+                api the app is using (Requires subscription to add more base currencies).</p>
+                <p>There are lots of options for target currency, but have limited the number of options.</p>
+
+            </div>
+            <footer>
+                <p style="color:red;">&copy Amos Ndonga, 2019 </p>
+            </footer>
+        </div>
+
+
+
+    </body>
+</html>

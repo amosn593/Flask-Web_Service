@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Foreign Exchange Rates</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css')}}">
+        <style>
+            body{background:darkgrey;
+                 text-align: center;
+                 padding-top: 50px;
+                 color: green;
+             #background-image: url("logo.jpg");}
+            h1{
+                color: red;
+            }
+            h3{
+                color: darkblue;
+            }
+            a{
+                font-weight: bold;
+                text-underline-position: below;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Foreign exchange rates</h1>
+        <br><br><br>
+        <h3>1 EURO equals {{rate}} {{target}}</h3>
+        <br>
+        <h4 >As at {{date}}</h4>
+        <br>
+        <a href="{{url_for('index')}}">Check another currency</a>
+
+    </body>
+</html>
